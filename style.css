@@ -172,8 +172,6 @@ em { font-style: italic; color: var(--green-dark); }
 }
 .logo-img--footer {
   height: clamp(56px, 7vw, 72px);
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
 }
 
 .nav__links {
