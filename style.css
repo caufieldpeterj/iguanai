@@ -7,20 +7,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green-dark:   #3A6B48;
-  --green:        #4A7C59;
-  --green-mid:    #7DBF8E;
-  --green-light:  #C8E6CC;
-  --cream:        #FAFAF7;
-  --cream-dark:   #F2F2EC;
-  --sand:         #EDE8DF;
-  --text:         #2D2D2D;
-  --text-muted:   #6B7462;
+  --green-dark:   #0C4F4F;
+  --green:        #1A6B6B;
+  --green-mid:    #3AADA8;
+  --green-light:  #B8DEDE;
+  --cream:        #F5F0E8;
+  --cream-dark:   #EDE8DE;
+  --sand:         #E5DDD0;
+  --text:         #1A2E2E;
+  --text-muted:   #5A7070;
   --white:        #FFFFFF;
   --radius:       12px;
   --radius-lg:    20px;
-  --shadow:       0 2px 16px rgba(58, 107, 72, 0.10);
-  --shadow-lg:    0 8px 40px rgba(58, 107, 72, 0.14);
+  --shadow:       0 2px 16px rgba(26, 107, 107, 0.10);
+  --shadow-lg:    0 8px 40px rgba(26, 107, 107, 0.16);
   --transition:   0.2s ease;
   --max-w:        1100px;
   --font-body:    'Inter', sans-serif;
@@ -162,6 +162,8 @@ em { font-style: italic; color: var(--green-dark); }
 
 .logo-icon { width: 38px; height: 38px; }
 .logo-icon--sm { width: 30px; height: 30px; }
+.logo-img { height: 48px; width: auto; border-radius: 6px; }
+.logo-img--footer { height: 56px; filter: brightness(0) invert(1); opacity: 0.9; }
 
 .nav__links {
   display: flex;
