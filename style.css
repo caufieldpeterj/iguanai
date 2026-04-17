@@ -701,6 +701,46 @@ input:focus, textarea:focus {
 }
 .footer__links a:hover { color: var(--green-mid); }
 
+/* footer columns */
+.footer__cols {
+  display: flex;
+  gap: 48px;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__col h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(250,250,247,0.4);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.footer__col a {
+  font-size: 0.9rem;
+  color: rgba(250,250,247,0.65);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.footer__col a:hover { color: var(--green-mid); }
+
+/* social icons */
+.footer__social {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+.footer__social a {
+  color: rgba(250,250,247,0.45);
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+}
+.footer__social a:hover { color: var(--green-mid); }
+
 .footer__bottom {
   padding: 20px 24px;
   text-align: center;
@@ -708,6 +748,47 @@ input:focus, textarea:focus {
 .footer__bottom p {
   font-size: 0.8rem;
   color: rgba(250,250,247,0.35);
+}
+
+/* ── Testimonials ─────────────────────────────────────────────────────── */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial-card blockquote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+}
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.testimonial-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.6;
+}
+.testimonial-metric {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green);
 }
 
 /* ============================================
@@ -728,6 +809,8 @@ input:focus, textarea:focus {
     flex-wrap: wrap;
   }
   .stat { flex: 1; min-width: 140px; }
+
+  .testimonials { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
@@ -747,6 +830,9 @@ input:focus, textarea:focus {
 
   .footer__inner { flex-direction: column; }
   .footer__links { justify-content: flex-start; }
+  .footer__cols { flex-wrap: wrap; gap: 32px; }
 
   .gap__inner { grid-template-columns: 1fr; }
+
+  .testimonials { grid-template-columns: 1fr; }
 }
