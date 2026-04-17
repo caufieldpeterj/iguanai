@@ -52,6 +52,33 @@ async function handleSubmit(e) {
   btn.disabled = false;
 }
 
+// Testimonial carousel
+(function () {
+  const carousel = document.getElementById('testimonialCarousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.testimonial-slide');
+  const dots   = carousel.querySelectorAll('.dot');
+  let current  = 0;
+  let timer;
+
+  function goToSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goToSlide(current + 1), 5000);
+  }
+
+  window.goToSlide = goToSlide;
+  resetTimer();
+})();
+
 // Smooth reveal on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.linkedin.com)"
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(find /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b -type f \\\\\\( -name \"*.css\" -o -name \"*.html\" \\\\\\) -exec grep -l \"\\\\.doc\\\\|\\\\.post__\\\\|\\\\.blog-\" {} \\\\;)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(git add *)"
     ]
   }
 }
