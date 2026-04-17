@@ -25,6 +25,8 @@
   --max-w:        1100px;
   --font-body:    'Inter', sans-serif;
   --font-display: 'Lora', serif;
+  --surface:      #FFFFFF;
+  --border:       #E2DDD4;
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
