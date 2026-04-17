@@ -14,7 +14,7 @@
 
   <header class="nav">
     <div class="container nav__inner">
-      <a href="/" class="nav__logo nav__logo--text">IguanAI</a>
+      <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img" alt="IguanAI"></a>
       <nav class="nav__links">
         <a href="/#services">Services</a>
         <a href="/#about">About</a>
@@ -22,6 +22,17 @@
         <a href="/blog/">Blog</a>
         <a href="/#contact" class="btn btn--nav">Get in Touch</a>
       </nav>
+      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="/#services" onclick="toggleMenu()">Services</a>
+      <a href="/#about" onclick="toggleMenu()">About</a>
+      <a href="/#partners" onclick="toggleMenu()">Partners</a>
+      <a href="/blog/" onclick="toggleMenu()">Blog</a>
+      <a href="/#contact" onclick="toggleMenu()">Contact</a>
+      <a href="/#contact" onclick="toggleMenu()">Get in Touch</a>
     </div>
   </header>
 
@@ -60,7 +71,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="/" class="nav__logo nav__logo--text nav__logo--footer">IguanAI</a>
+        <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img logo-img--footer" alt="IguanAI"></a>
         <p>High touch. Outcome obsessed.</p>
         <p class="footer__location">Delray Beach, FL</p>
       </div>
@@ -89,5 +100,6 @@
     </div>
   </footer>
 
+  <script src="/main.js"></script>
 </body>
 </html>
