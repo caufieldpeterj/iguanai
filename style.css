@@ -486,6 +486,87 @@ em { font-style: italic; color: var(--green-dark); }
 }
 
 /* ============================================
+   PARTNERS STRIP
+   ============================================ */
+.partners {
+  background: var(--cream-dark);
+  border-top: 1px solid var(--green-light);
+  border-bottom: 1px solid var(--green-light);
+  padding: 36px 0;
+  overflow: hidden;
+}
+
+.partners__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.partners__track-wrap {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.partners__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.partners__track:hover {
+  animation-play-state: paused;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  transition: opacity var(--transition);
+}
+
+.partners__item img {
+  height: 32px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.5);
+  transition: filter var(--transition);
+  display: block;
+}
+
+.partners__item:hover img {
+  filter: grayscale(0%) opacity(1);
+}
+
+.partners__item--blend img {
+  mix-blend-mode: multiply;
+}
+
+.partners__item img[src="logos/casper.png"],
+.partners__item img[src="logos/felix-gray.png"] {
+  height: 18px;
+}
+
+.partners__sep {
+  color: var(--green-light);
+  font-size: 1.2rem;
+  padding: 0 4px;
+  user-select: none;
+}
+
+/* ============================================
    CONTACT
    ============================================ */
 .contact {
