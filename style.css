@@ -801,6 +801,19 @@ input:focus, textarea:focus {
   font-weight: 700;
   color: var(--green);
 }
+.testimonial-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--green);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+.testimonial-link:hover {
+  color: var(--green-dark);
+  border-bottom-color: var(--green-dark);
+}
 .testimonial-dots {
   display: flex;
   gap: 8px;
