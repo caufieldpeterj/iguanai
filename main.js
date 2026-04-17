@@ -15,7 +15,7 @@ document.addEventListener('click', (e) => {
 
 // Contact form — Google Apps Script backend
 // Paste your deployed script URL here after following APPS-SCRIPT-SETUP.md
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx75OQOkDql7dDY5_fZ3QRMl3n56qSkXlLLe0rZPZbvOhLGwTJDnikSm5bSPRRnOCof/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzN_t8qnoR_g7Y-oaN9ECOF32Ed35aY4G-LeNXEQMUXe0a_KYazFbVWAwEOTmNfpls/exec';
 
 async function handleSubmit(e) {
   e.preventDefault();
