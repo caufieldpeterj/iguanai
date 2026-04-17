@@ -28,10 +28,10 @@
 
 ## Custom domain (optional, still free)
 
-1. Buy a domain (e.g. iguanai.com via Namecheap ~$10/yr)
+1. Buy a domain (e.g. iguanai.us via Namecheap ~$10/yr)
 2. In your domain DNS, add a CNAME record:
    - Host: `www`  →  Value: `YOUR_USERNAME.github.io`
-3. In GitHub Pages settings, set your custom domain to `www.iguanai.com`
+3. In GitHub Pages settings, set your custom domain to `www.iguanai.us`
 4. Check "Enforce HTTPS"
 
 ## Update the site later
@@ -45,7 +45,7 @@ GitHub Pages redeploys automatically within ~60 seconds.
 
 ## Before going live — checklist
 
-- [ ] Replace `hello@iguanai.com` in `main.js` with your real email
+- [ ] Replace `info@iguanai.us` in `main.js` with your real email
 - [ ] Update the LinkedIn URL in `index.html` footer if needed
 - [ ] Test the contact form
 - [ ] Check on mobile

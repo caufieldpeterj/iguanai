@@ -1,7 +1,7 @@
 // IguanAI — Contact Form Handler
 // Google Apps Script: paste this into script.google.com, then follow APPS-SCRIPT-SETUP.md
 
-var NOTIFY_EMAIL = 'hello@iguanai.com'; // Update this once Cloudflare forwarding is live
+var NOTIFY_EMAIL = 'info@iguanai.us';
 
 // ---------------------------------------------------------------------------
 // Entry point — handles POST from the contact form
