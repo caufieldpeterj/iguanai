@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <header class="nav">
     <div class="container nav__inner">
@@ -22,7 +23,7 @@
         <a href="/blog/">Blog</a>
         <a href="/#contact" class="btn btn--nav">Get in Touch</a>
       </nav>
-      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -36,7 +37,7 @@
     </div>
   </header>
 
-  <main class="post">
+  <main id="main" tabindex="-1" class="post">
     <div class="container post__inner">
       <p class="post__back"><a href="/blog/">&larr; All posts</a></p>
       <span class="section-tag">Journal</span>
