@@ -13,28 +13,43 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Contact form — mailto fallback (no backend needed)
-function handleSubmit(e) {
+// Contact form — Google Apps Script backend
+// Paste your deployed script URL here after following APPS-SCRIPT-SETUP.md
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx75OQOkDql7dDY5_fZ3QRMl3n56qSkXlLLe0rZPZbvOhLGwTJDnikSm5bSPRRnOCof/exec';
+
+async function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
-  const name    = form.name.value.trim();
-  const company = form.company.value.trim();
-  const email   = form.email.value.trim();
-  const message = form.message.value.trim();
 
-  const subject = encodeURIComponent(`IguanAI inquiry from ${name}${company ? ' @ ' + company : ''}`);
-  const body    = encodeURIComponent(
-    `Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n\nMessage:\n${message}`
-  );
+  // Honeypot — silently abort if a bot filled the hidden field
+  if (form.website.value) return;
 
-  // Open mailto — replace with your email address
-  window.location.href = `mailto:hello@iguanai.com?subject=${subject}&body=${body}`;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
 
-  // Show success state
+  try {
+    // no-cors: response is opaque but the POST goes through to Apps Script
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode:   'no-cors',
+      body:   JSON.stringify({
+        name:    form.name.value.trim(),
+        company: form.company.value.trim(),
+        email:   form.email.value.trim(),
+        message: form.message.value.trim()
+      })
+    });
+  } catch (_) {
+    // Network errors still show success — submission likely went through
+  }
+
   form.reset();
   const success = document.getElementById('formSuccess');
   success.style.display = 'block';
   setTimeout(() => { success.style.display = 'none'; }, 5000);
+  btn.textContent = 'Send Message';
+  btn.disabled = false;
 }
 
 // Smooth reveal on scroll

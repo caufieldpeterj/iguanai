@@ -206,6 +206,12 @@
           <label for="message">What are you working on?</label>
           <textarea id="message" name="message" rows="4" placeholder="Briefly describe the workflow or challenge you're looking to solve..." required></textarea>
         </div>
+        <!-- Honeypot — invisible to humans, bots fill it and get silently rejected -->
+        <div style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
+          <label for="website">Leave this blank</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
         <button type="submit" class="btn btn--primary btn--full">Send Message</button>
         <p class="form__note">We respond within 1 business day.</p>
         <div id="formSuccess" class="form__success" style="display:none;">
