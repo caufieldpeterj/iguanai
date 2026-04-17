@@ -31,6 +31,7 @@ function doPost(e) {
     // Email notification
     MailApp.sendEmail({
       to:      NOTIFY_EMAIL,
+      replyTo: email,
       subject: 'IguanAI inquiry — ' + name + (company ? ' @ ' + company : ''),
       body:    'Name:    ' + name                  + '\n' +
                'Company: ' + (company || 'N/A')    + '\n' +
