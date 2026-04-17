@@ -5,7 +5,24 @@
       "Bash(find /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b -type f \\\\\\( -name \"*.css\" -o -name \"*.html\" \\\\\\) -exec grep -l \"\\\\.doc\\\\|\\\\.post__\\\\|\\\\.blog-\" {} \\\\;)",
       "Bash(python3 -c ' *)",
       "Bash(python3)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b status --short)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b ls-files --others --exclude-standard)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b check-ignore -v logo.jpg)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b add logo.jpg)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b status logo.jpg)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI/.claude/worktrees/loving-nash-0e350b rev-parse --git-dir)",
+      "Read(//Users/petercaufield/Desktop/IguanAI/.git/info/**)",
+      "Read(//Users/petercaufield/Desktop/IguanAI/**)",
+      "Bash(git -C /Users/petercaufield/Desktop/IguanAI ls-files --others --exclude-standard)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --title 'Fix QA issues: logo, hamburger nav, legal pages, social links, testimonial carousel' --body ' *)",
+      "Bash(/usr/bin/gh --version)",
+      "Read(//usr/local/bin/**)",
+      "Bash(python3 -m http.server 8080)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
+      "Bash(xargs sed *)"
     ]
   }
 }

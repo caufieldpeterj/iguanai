@@ -25,6 +25,8 @@
   --max-w:        1100px;
   --font-body:    'Inter', sans-serif;
   --font-display: 'Lora', serif;
+  --surface:      #FFFFFF;
+  --border:       #E2DDD4;
 }
 
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -817,6 +819,131 @@ input:focus, textarea:focus {
 .dot.active {
   background: var(--green);
   transform: scale(1.25);
+}
+
+/* ── Blog index ───────────────────────────────────────────────────────── */
+.blog-index {
+  padding: 72px 0 100px;
+}
+.blog-index__inner {
+  max-width: 760px;
+}
+.blog-index h1 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.blog-index__lede {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 56px;
+}
+.post-list {
+  display: flex;
+  flex-direction: column;
+}
+.post-card {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+.post-card:first-child {
+  border-top: 1px solid var(--border);
+}
+.post-card__date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 10px;
+}
+.post-card h2 {
+  font-size: clamp(1.2rem, 1.2vw + 0.9rem, 1.6rem);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.post-card h2 a {
+  color: var(--text);
+  transition: color var(--transition);
+}
+.post-card h2 a:hover {
+  color: var(--green);
+}
+.post-card p:not(.post-card__date) {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+.post-card__more {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--green);
+  transition: color var(--transition);
+  grid-column: 2;
+}
+.post-card__more:hover {
+  color: var(--green-dark);
+}
+
+/* ── Blog post ─────────────────────────────────────────────────────────── */
+.post {
+  padding: 64px 0 100px;
+}
+.post__inner {
+  max-width: 720px;
+}
+.post__back {
+  font-size: 0.875rem;
+  margin-bottom: 32px;
+}
+.post__back a {
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.post__back a:hover {
+  color: var(--green);
+}
+.post h1 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.post__meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+.post p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+.post__sign {
+  margin-top: 40px;
+  font-style: italic;
+  color: var(--text) !important;
+}
+.post__cta {
+  margin-top: 64px;
+  padding: 40px 48px;
+  background: var(--green-dark);
+  border-radius: var(--radius-lg);
+  color: var(--white);
+}
+.post__cta h3 {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.post__cta p {
+  color: rgba(255,255,255,0.75) !important;
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .post__cta { padding: 28px 24px; }
 }
 
 /* ── Legal / Doc pages ────────────────────────────────────────────────── */
