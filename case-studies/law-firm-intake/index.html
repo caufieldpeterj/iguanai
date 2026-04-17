@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automating intake at a regional law firm — IguanAI Case Study</title>
+  <meta name="description" content="A regional law firm recovered roughly twelve hours a week by automating client intake — qualification, routing, and follow-up." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="IguanAI Team" />
+  <link rel="canonical" href="https://iguanai.us/case-studies/law-firm-intake/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="IguanAI" />
+  <meta property="og:title" content="Automating intake at a regional law firm" />
+  <meta property="og:description" content="A regional law firm recovered roughly twelve hours a week by automating client intake — qualification, routing, and follow-up." />
+  <meta property="og:url" content="https://iguanai.us/case-studies/law-firm-intake/" />
+  <meta property="og:image" content="https://iguanai.us/og-image.png" />
+  <meta property="article:published_time" content="2026-04-17" />
+  <meta property="article:author" content="IguanAI Team" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Automating intake at a regional law firm" />
+  <meta name="twitter:description" content="A regional law firm recovered roughly twelve hours a week by automating client intake — qualification, routing, and follow-up." />
+  <meta name="twitter:image" content="https://iguanai.us/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Automating intake at a regional law firm",
+    "description": "A regional law firm recovered roughly twelve hours a week by automating client intake — qualification, routing, and follow-up.",
+    "url": "https://iguanai.us/case-studies/law-firm-intake/",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-17",
+    "image": "https://iguanai.us/og-image.png",
+    "author": { "@type": "Organization", "name": "IguanAI" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IguanAI",
+      "logo": { "@type": "ImageObject", "url": "https://iguanai.us/og-image.png" }
+    },
+    "about": { "@type": "Thing", "name": "Legal services workflow automation" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://iguanai.us/case-studies/law-firm-intake/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img" alt="IguanAI"></a>
+      <nav class="nav__links">
+        <a href="/#services">Services</a>
+        <a href="/#about">About</a>
+        <a href="/#partners">Partners</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact" class="btn btn--nav">Get in Touch</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="/#services" onclick="toggleMenu()">Services</a>
+      <a href="/#about" onclick="toggleMenu()">About</a>
+      <a href="/#partners" onclick="toggleMenu()">Partners</a>
+      <a href="/case-studies/" onclick="toggleMenu()">Case Studies</a>
+      <a href="/blog/" onclick="toggleMenu()">Blog</a>
+      <a href="/#contact" onclick="toggleMenu()">Get in Touch</a>
+    </div>
+  </header>
+
+  <main class="post">
+    <div class="container post__inner">
+      <p class="post__back"><a href="/case-studies/">&larr; All case studies</a></p>
+      <span class="section-tag">Case Study · Legal</span>
+      <h1>Automating intake at a regional law firm</h1>
+      <p class="post__meta">Industry: Legal services · Engagement: [PLACEHOLDER: Q1 2026]</p>
+
+<blockquote>"We used to spend two days a week on intake. It's now fully automated — leads qualify, route, and follow up without anyone touching them."<br/><em>— COO, Regional Law Firm</em></blockquote>
+
+<h2>The challenge</h2>
+<p>A [PLACEHOLDER: ~25-attorney] regional law firm was running its new-client intake by hand. Every inbound lead — phone, web form, referral — landed in a shared inbox. A paralegal triaged each one, decided whether it fit the firm's practice areas, gathered the missing information over email, and routed it to the right attorney. Follow-up was manual; if a prospect went quiet for a few days, nobody noticed.</p>
+<p>The COO estimated the firm was losing [PLACEHOLDER: roughly 15–20%] of qualified leads to slow response and dropped follow-up. Internally, intake was eating about [PLACEHOLDER: two days per week] of senior staff time that should have been going to billable matters.</p>
+
+<h2>Our approach</h2>
+<p>We spent the first session sitting with the paralegal who handled intake and watched the actual workflow — not the documented one. Most of the value showed up there: a handful of decisions she made on instinct that nobody had ever written down.</p>
+<p>From that, we mapped intake into three jobs that could be separated cleanly: <strong>capture</strong> (get the inbound lead into a structured record), <strong>qualify</strong> (decide whether the matter fits the firm), and <strong>route</strong> (hand it to the right attorney with the right context). Each one became its own automation, with a human review step where the cost of a mistake was high.</p>
+
+<h2>What we built</h2>
+<ul>
+  <li>A single intake form that replaces three different web entry points and pre-fills based on referral source.</li>
+  <li>An AI qualification step that scores each new matter against the firm's practice criteria and surfaces the reasoning so attorneys can override it.</li>
+  <li>Automatic routing into the firm's existing case management system, including conflict-check trigger and a calendar invite for the assigned attorney.</li>
+  <li>A follow-up sequence that re-engages prospects who go quiet, with messaging written in the firm's voice — and that stops the moment a human replies.</li>
+  <li>A weekly digest for the COO showing intake volume, qualification rate, time-to-first-response, and any matters that fell out of the pipeline.</li>
+</ul>
+
+<h2>Results</h2>
+<ul>
+  <li><strong>~12 hours per week</strong> of paralegal and attorney time recovered.</li>
+  <li><strong>[PLACEHOLDER: ~85%]</strong> of new leads now receive a first response in under [PLACEHOLDER: 5 minutes], down from a previous median of [PLACEHOLDER: ~6 hours].</li>
+  <li><strong>[PLACEHOLDER: ~30%]</strong> increase in qualified-lead-to-consult conversion in the first quarter after launch.</li>
+  <li>Zero qualified matters dropped from the pipeline since go-live.</li>
+</ul>
+
+<h2>Timeline</h2>
+<ul>
+  <li><strong>Week 1:</strong> Workflow shadowing, scope agreement, and shared documentation of the qualification rules.</li>
+  <li><strong>Weeks 2–3:</strong> Build of the intake form, qualification model, and routing into the case management system.</li>
+  <li><strong>Week 4:</strong> Pilot with the COO and one practice group, manual review on every routed matter.</li>
+  <li><strong>Weeks 5–6:</strong> Rollout to the remaining practice groups, follow-up sequences live, weekly digest delivered.</li>
+</ul>
+<p>Total elapsed time from kickoff to firm-wide production: <strong>[PLACEHOLDER: about six weeks]</strong>.</p>
+
+<p class="post__sign">— The IguanAI Team</p>
+
+      <div class="post__cta">
+        <p>Running intake by hand at your firm? Fifteen minutes on a call is usually enough for us to tell you whether automation is worth it.</p>
+        <a href="/#contact" class="btn btn--primary">Book a Free Call</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img logo-img--footer" alt="IguanAI"></a>
+        <p>High touch. Outcome obsessed.</p>
+        <p class="footer__location">Delray Beach, FL</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="/#services">Services</a>
+          <a href="/#about">About</a>
+          <a href="/#partners">Partners</a>
+          <a href="/case-studies/">Case Studies</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="/#contact">Contact Us</a>
+          <a href="mailto:info@iguanai.us">info@iguanai.us</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 IguanAI LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
