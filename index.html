@@ -3,12 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IguanAI — Your Dedicated AI Architect</title>
+  <title>IguanAI — Your Dedicated AI Architect | Delray Beach, FL</title>
   <meta name="description" content="IguanAI helps Palm Beach County executives implement AI that actually runs their business. High touch. Outcome obsessed. Based in Delray Beach, FL." />
+  <meta name="author" content="IguanAI" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://iguanai.us/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IguanAI" />
+  <meta property="og:title" content="IguanAI — Your Dedicated AI Architect" />
+  <meta property="og:description" content="We identify the highest-leverage AI opportunities in your workflow and build the solution ourselves. High touch. Outcome obsessed." />
+  <meta property="og:url" content="https://iguanai.us/" />
+  <meta property="og:image" content="https://iguanai.us/og-image.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IguanAI — Your Dedicated AI Architect" />
+  <meta name="twitter:description" content="We identify the highest-leverage AI opportunities in your workflow and build the solution ourselves." />
+  <meta name="twitter:image" content="https://iguanai.us/og-image.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://iguanai.us/#organization",
+        "name": "IguanAI",
+        "legalName": "IguanAI LLC",
+        "url": "https://iguanai.us/",
+        "logo": "https://iguanai.us/og-image.png",
+        "email": "info@iguanai.us",
+        "slogan": "High touch. Outcome obsessed.",
+        "description": "AI architects who identify the highest-leverage opportunities in your workflow and build the solution — automations, AI assistants, dashboards, and intake flows.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Delray Beach",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Palm Beach County, Florida"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/iguanai"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://iguanai.us/#website",
+        "url": "https://iguanai.us/",
+        "name": "IguanAI",
+        "publisher": { "@id": "https://iguanai.us/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://iguanai.us/#localbusiness",
+        "name": "IguanAI",
+        "image": "https://iguanai.us/og-image.png",
+        "url": "https://iguanai.us/",
+        "email": "info@iguanai.us",
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Delray Beach",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "areaServed": "Palm Beach County, Florida"
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "IguanAI — AI Architecture & Implementation",
+        "provider": { "@id": "https://iguanai.us/#organization" },
+        "areaServed": "Palm Beach County, Florida",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "AI Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workflow Automation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom AI Assistants" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reporting Dashboards" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Client Intake Flows" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Strategy & Roadmap" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -20,7 +119,7 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#partners">Partners</a>
-        <a href="/blog">Blog</a>
+        <a href="/blog/">Blog</a>
         <a href="#contact" class="btn btn--nav">Get in Touch</a>
       </nav>
       <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
@@ -31,7 +130,7 @@
       <a href="#services" onclick="toggleMenu()">Services</a>
       <a href="#about" onclick="toggleMenu()">About</a>
       <a href="#partners" onclick="toggleMenu()">Partners</a>
-      <a href="/blog" onclick="toggleMenu()">Blog</a>
+      <a href="/blog/" onclick="toggleMenu()">Blog</a>
       <a href="#contact" onclick="toggleMenu()">Get in Touch</a>
     </div>
   </header>
@@ -39,21 +138,22 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero__inner">
-      <div class="hero__eyebrow">Delray Beach, FL &nbsp;·&nbsp; Palm Beach County</div>
+      <div class="hero__meta">
+        <span>IguanAI / 2026</span>
+        <span class="hero__loc">Delray Beach, FL</span>
+      </div>
       <h1 class="hero__headline">
         Your dedicated<br/>
-        <em>AI Architect.</em>
+        <em>AI architect.</em>
       </h1>
-      <p class="hero__sub">High touch. Outcome obsessed.</p>
       <p class="hero__body">
-        We identify the highest-leverage opportunities in your workflow, then build the solution ourselves — automations, AI assistants, dashboards, and intake flows. Scoped fast, delivered in weeks, not months.
+        We identify the highest-leverage opportunities in your workflow, then build the solution ourselves — <b>automations, assistants, dashboards, intake flows.</b> Scoped in a call. Delivered in weeks.
       </p>
       <div class="hero__actions">
-        <a href="#contact" class="btn btn--primary">Let's Talk</a>
-        <a href="#services" class="btn btn--ghost">See What We Build</a>
+        <a href="#contact" class="btn btn--primary">Start a conversation</a>
+        <a href="#services" class="hero__link">See what we build</a>
       </div>
     </div>
-    <div class="hero__bg-shape" aria-hidden="true"></div>
   </section>
 
   <!-- THE GAP SECTION -->
@@ -74,76 +174,51 @@
   <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What We Build</span>
-        <h2>Real tools for real workflows.</h2>
-        <p>We don't consult from a distance. We build alongside you and hand over working systems.</p>
+      <div class="services__head">
+        <div class="services__num">§ 02 — What we build</div>
+        <h2>Five things,<br/>shipped in weeks.</h2>
       </div>
-      <div class="services__grid">
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="32" height="6" rx="3" fill="#4A7C59" opacity="0.2"/>
-              <rect x="4" y="18" width="24" height="6" rx="3" fill="#4A7C59" opacity="0.4"/>
-              <rect x="4" y="28" width="28" height="6" rx="3" fill="#4A7C59" opacity="0.7"/>
-              <circle cx="34" cy="22" r="5" fill="#4A7C59"/>
-              <path d="M31.5 22 L33.5 24 L37 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+      <div class="services__list">
+        <a href="#contact" class="svc-row">
+          <span class="svc-row__idx">01</span>
+          <div>
+            <div class="svc-row__name">Workflow automation</div>
+            <div class="svc-row__desc">Replace the copy-paste layer of your business.</div>
           </div>
-          <h3>Workflow Automation</h3>
-          <p>We map your manual processes and replace them with automations that run without you. No more copy-paste, data entry, or human bottlenecks.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="6" width="18" height="22" rx="4" fill="#4A7C59" opacity="0.3"/>
-              <rect x="16" y="12" width="18" height="22" rx="4" fill="#4A7C59" opacity="0.7"/>
-              <circle cx="25" cy="18" r="3" fill="white"/>
-              <path d="M22 26 Q25 23 28 26" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            </svg>
+          <span class="svc-row__arrow">↗</span>
+        </a>
+        <a href="#contact" class="svc-row">
+          <span class="svc-row__idx">02</span>
+          <div>
+            <div class="svc-row__name">Custom AI assistants</div>
+            <div class="svc-row__desc">Internal or client-facing. Trained on your stack.</div>
           </div>
-          <h3>Custom AI Assistants</h3>
-          <p>AI that knows your business — your products, your clients, your processes. Deployed as internal tools or client-facing interfaces.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="22" width="7" height="14" rx="2" fill="#4A7C59" opacity="0.4"/>
-              <rect x="14" y="16" width="7" height="20" rx="2" fill="#4A7C59" opacity="0.6"/>
-              <rect x="24" y="10" width="7" height="26" rx="2" fill="#4A7C59" opacity="0.85"/>
-              <path d="M5 20 L18 14 L28 8" stroke="#4A7C59" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 2"/>
-            </svg>
+          <span class="svc-row__arrow">↗</span>
+        </a>
+        <a href="#contact" class="svc-row">
+          <span class="svc-row__idx">03</span>
+          <div>
+            <div class="svc-row__name">Reporting dashboards</div>
+            <div class="svc-row__desc">One screen. Morning coffee. Everything you need.</div>
           </div>
-          <h3>Reporting Dashboards</h3>
-          <p>Real-time visibility into what matters. We build data pipelines and dashboards so you stop digging through spreadsheets and start making decisions.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 10 L8 32 L32 32" stroke="#4A7C59" stroke-width="2" stroke-linecap="round"/>
-              <rect x="12" y="6" width="18" height="14" rx="3" fill="#4A7C59" opacity="0.2" stroke="#4A7C59" stroke-width="1.5"/>
-              <path d="M16 11 L24 11 M16 15 L21 15" stroke="#4A7C59" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M20 20 L20 32" stroke="#4A7C59" stroke-width="1.5" stroke-dasharray="2 2"/>
-            </svg>
+          <span class="svc-row__arrow">↗</span>
+        </a>
+        <a href="#contact" class="svc-row">
+          <span class="svc-row__idx">04</span>
+          <div>
+            <div class="svc-row__name">Client intake flows</div>
+            <div class="svc-row__desc">Qualify, capture, route — automated.</div>
           </div>
-          <h3>Client Intake Flows</h3>
-          <p>Intake systems that qualify, capture, and route leads automatically. Turn your intake process into your first impression — and your first automation.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="14" stroke="#4A7C59" stroke-width="2" fill="#4A7C59" fill-opacity="0.1"/>
-              <path d="M14 20 L18 24 L27 15" stroke="#4A7C59" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <span class="svc-row__arrow">↗</span>
+        </a>
+        <a href="#contact" class="svc-row">
+          <span class="svc-row__idx">05</span>
+          <div>
+            <div class="svc-row__name">AI strategy &amp; roadmap</div>
+            <div class="svc-row__desc">An audit + prioritized plan. Not a deck — an execution path.</div>
           </div>
-          <h3>AI Strategy & Roadmap</h3>
-          <p>Not sure where to start? We audit your operations, identify the highest-ROI opportunities, and build a prioritized AI roadmap you can actually execute.</p>
-        </div>
-        <div class="service-card service-card--cta">
-          <p class="service-card__cta-text">Not sure which applies to you?</p>
-          <p>That's the conversation. We'll figure it out together in 30 minutes.</p>
-          <a href="#contact" class="btn btn--primary">Book a Free Call</a>
-                </div>
+          <span class="svc-row__arrow">↗</span>
+        </a>
       </div>
       <!-- TESTIMONIALS CAROUSEL -->
       <div class="testimonial-carousel" id="testimonialCarousel">
@@ -188,90 +263,52 @@
   <!-- ABOUT / CREDENTIALS -->
   <section class="about" id="about">
     <div class="container about__inner">
-      <div class="about__content">
-        <span class="section-tag">About IguanAI</span>
-        <h2>Built by architects who've done it at scale.</h2>
-        <p>IguanAI was founded by a team of solution architects with decades of experience translating complex technical systems into real business outcomes — across Wall Street, enterprise software, e-commerce, big box retail, and healthcare technology.</p>
-        <p>We've built integrations that live in <strong>1,300+ retail locations</strong>, data pipelines for the <strong>Fortune 50</strong>, and LLM applications for the <strong>largest healthcare organizations in the country.</strong></p>
+      <div class="about__lbl">Who's building this</div>
+      <h2 class="about__head">Solution architects who've<br/>done it <em>at scale,</em> now<br/>doing it for you.</h2>
+      <div class="about__copy">
+        <p>IguanAI was founded by a team of solution architects with decades of experience translating complex technical systems into real business outcomes — across Wall Street, enterprise software, big box retail, and healthcare technology.</p>
         <p>We keep our client roster intentionally small. The model is depth over volume: a handful of great clients who get real results and refer us to people they trust.</p>
-        <p class="about__location">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline;vertical-align:middle;margin-right:6px;">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#4A7C59"/>
-          </svg>
-          Based in Delray Beach, FL. Built for Palm Beach County.
-        </p>
+        <p class="about__location">Based in Delray Beach, FL · Built for Palm Beach County</p>
       </div>
       <div class="about__stats">
         <div class="stat">
-          <div class="stat__number">1,300+</div>
-          <div class="stat__label">Retail locations running our integrations</div>
+          <div class="stat__number">1,300</div>
+          <div class="stat__label">Retail locations running integrations we built</div>
         </div>
         <div class="stat">
           <div class="stat__number">F50</div>
-          <div class="stat__label">Data pipelines built for Fortune 50 companies</div>
+          <div class="stat__label">Data pipelines shipped for Fortune 50 companies</div>
         </div>
         <div class="stat">
-          <div class="stat__number">Weeks</div>
-          <div class="stat__label">Not months — typical time to first deployment</div>
+          <div class="stat__number">20+</div>
+          <div class="stat__label">Combined years across Wall Street, retail, healthcare</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PARTNERS STRIP -->
-  <!-- To update: edit the partner names inside .partners__track — keep both halves identical for the seamless loop -->
+  <!-- PARTNERS -->
   <section class="partners" id="partners">
     <div class="container">
-      <p class="partners__label">Where We've Built</p>
-    </div>
-    <div class="partners__track-wrap" aria-hidden="true">
-      <div class="partners__track">
-        <span class="partners__item"><img src="logos/michaels.svg" alt="Michaels"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/advance-auto-parts.svg" alt="Advance Auto Parts"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/mattress-firm.svg" alt="Mattress Firm"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item partners__item--blend"><img src="logos/casper.png" alt="Casper"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/sonos.svg" alt="Sonos"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/irobot.svg" alt="iRobot"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/peloton.svg" alt="Peloton"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/brilliant-earth.svg" alt="Brilliant Earth"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item partners__item--blend"><img src="logos/felix-gray.png" alt="Felix Gray"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item partners__item--blend"><img src="logos/monster.png" alt="Monster Tree Service"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/lulu-and-georgia.svg" alt="Lulu and Georgia"></span>
-        <span class="partners__sep">·</span>
-        <!-- duplicate for seamless loop -->
-        <span class="partners__item"><img src="logos/michaels.svg" alt="Michaels"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/advance-auto-parts.svg" alt="Advance Auto Parts"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/mattress-firm.svg" alt="Mattress Firm"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item partners__item--blend"><img src="logos/casper.png" alt="Casper"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/sonos.svg" alt="Sonos"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/irobot.svg" alt="iRobot"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/peloton.svg" alt="Peloton"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/brilliant-earth.svg" alt="Brilliant Earth"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item partners__item--blend"><img src="logos/felix-gray.png" alt="Felix Gray"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item partners__item--blend"><img src="logos/monster.png" alt="Monster Tree Service"></span>
-        <span class="partners__sep">·</span>
-        <span class="partners__item"><img src="logos/lulu-and-georgia.svg" alt="Lulu and Georgia"></span>
-        <span class="partners__sep">·</span>
+      <div class="partners__head">
+        <span class="partners__lbl">Where we've built · Prior work</span>
+        <span class="partners__count"><em>11 brands · 20+ years combined</em></span>
       </div>
+      <div class="partners__grid">
+        <div class="partner"><img src="logos/michaels.svg" alt="Michaels"><span class="partner__scale">1,300 locations</span></div>
+        <div class="partner"><img src="logos/advance-auto-parts.svg" alt="Advance Auto Parts"><span class="partner__scale">F500 retail</span></div>
+        <div class="partner"><img src="logos/mattress-firm.svg" alt="Mattress Firm"><span class="partner__scale">2,500 stores</span></div>
+        <div class="partner partner--blend"><img src="logos/casper.png" alt="Casper"><span class="partner__scale">DTC</span></div>
+        <div class="partner"><img src="logos/sonos.svg" alt="Sonos"><span class="partner__scale">Consumer tech</span></div>
+        <div class="partner"><img src="logos/irobot.svg" alt="iRobot"><span class="partner__scale">Robotics</span></div>
+        <div class="partner"><img src="logos/peloton.svg" alt="Peloton"><span class="partner__scale">Connected fitness</span></div>
+        <div class="partner"><img src="logos/brilliant-earth.svg" alt="Brilliant Earth"><span class="partner__scale">Jewelry</span></div>
+        <div class="partner"><img src="logos/lulu-and-georgia.svg" alt="Lulu and Georgia"><span class="partner__scale">Home</span></div>
+        <div class="partner partner--blend"><img src="logos/felix-gray.png" alt="Felix Gray"><span class="partner__scale">Eyewear</span></div>
+        <div class="partner partner--blend"><img src="logos/monster.png" alt="Monster Tree Service"><span class="partner__scale">Services</span></div>
+        <div class="partner partner--more">+ unlisted</div>
+      </div>
+      <div class="partners__foot">Integrations, pipelines &amp; AI applications shipped across these teams.</div>
     </div>
   </section>
 
@@ -336,7 +373,7 @@
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#partners">Partners</a>
-          <a href="/blog">Blog</a>
+          <a href="/blog/">Blog</a>
         </div>
         <div class="footer__col">
           <h4>Connect</h4>
@@ -345,8 +382,8 @@
         </div>
         <div class="footer__col">
           <h4>Legal</h4>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
         </div>
       </div>
     </div>
