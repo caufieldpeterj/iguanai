@@ -32,6 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/logo.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
@@ -110,6 +111,7 @@
   </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- NAV -->
   <header class="nav">
@@ -119,10 +121,12 @@
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#partners">Partners</a>
+        <a href="/case-studies/">Case Studies</a>
         <a href="/blog/">Blog</a>
+        <a href="/faq/">FAQ</a>
         <a href="#contact" class="btn btn--nav">Get in Touch</a>
       </nav>
-      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -130,13 +134,15 @@
       <a href="#services" onclick="toggleMenu()">Services</a>
       <a href="#about" onclick="toggleMenu()">About</a>
       <a href="#partners" onclick="toggleMenu()">Partners</a>
+      <a href="/case-studies/" onclick="toggleMenu()">Case Studies</a>
       <a href="/blog/" onclick="toggleMenu()">Blog</a>
+      <a href="/faq/" onclick="toggleMenu()">FAQ</a>
       <a href="#contact" onclick="toggleMenu()">Get in Touch</a>
     </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="main" tabindex="-1">
     <div class="container hero__inner">
       <div class="hero__meta">
         <span>IguanAI / 2026</span>
@@ -228,6 +234,7 @@
             <span class="testimonial-role">COO, Regional Law Firm</span>
             <span class="testimonial-metric">~12 hrs/week recovered</span>
           </div>
+          <a href="/case-studies/law-firm-intake/" class="testimonial-link">Read the case study →</a>
         </div>
         <div class="testimonial-slide">
           <blockquote>"The dashboard IguanAI built replaced four separate spreadsheets. I check one screen in the morning and I know exactly where the business stands."</blockquote>
@@ -235,6 +242,7 @@
             <span class="testimonial-role">CEO, Healthcare Services Company</span>
             <span class="testimonial-metric">4 reports consolidated into 1</span>
           </div>
+          <a href="/case-studies/healthcare-dashboard/" class="testimonial-link">Read the case study →</a>
         </div>
         <div class="testimonial-slide">
           <blockquote>"Our AI assistant handles 80% of client questions before they ever reach the team. Response time dropped from hours to seconds."</blockquote>
@@ -242,6 +250,7 @@
             <span class="testimonial-role">Founder, Financial Advisory Firm</span>
             <span class="testimonial-metric">Response time: hours → seconds</span>
           </div>
+          <a href="/case-studies/financial-advisory-assistant/" class="testimonial-link">Read the case study →</a>
         </div>
         <div class="testimonial-slide">
           <blockquote>"They mapped our entire onboarding workflow in a single session and had an automation running within a week. We haven&#8217;t touched it since."</blockquote>
@@ -249,6 +258,7 @@
             <span class="testimonial-role">Director of Operations, E-commerce Brand</span>
             <span class="testimonial-metric">40% reduction in onboarding time</span>
           </div>
+          <a href="/case-studies/ecommerce-onboarding/" class="testimonial-link">Read the case study →</a>
         </div>
         <div class="testimonial-dots">
           <button class="dot active" onclick="goToSlide(0)" aria-label="Testimonial 1"></button>
@@ -295,17 +305,17 @@
         <span class="partners__count"><em>11 brands · 20+ years combined</em></span>
       </div>
       <div class="partners__grid">
-        <div class="partner"><img src="logos/michaels.svg" alt="Michaels"><span class="partner__scale">1,300 locations</span></div>
-        <div class="partner"><img src="logos/advance-auto-parts.svg" alt="Advance Auto Parts"><span class="partner__scale">F500 retail</span></div>
-        <div class="partner"><img src="logos/mattress-firm.svg" alt="Mattress Firm"><span class="partner__scale">2,500 stores</span></div>
-        <div class="partner partner--blend"><img src="logos/casper.png" alt="Casper"><span class="partner__scale">DTC</span></div>
-        <div class="partner"><img src="logos/sonos.svg" alt="Sonos"><span class="partner__scale">Consumer tech</span></div>
-        <div class="partner"><img src="logos/irobot.svg" alt="iRobot"><span class="partner__scale">Robotics</span></div>
-        <div class="partner"><img src="logos/peloton.svg" alt="Peloton"><span class="partner__scale">Connected fitness</span></div>
-        <div class="partner"><img src="logos/brilliant-earth.svg" alt="Brilliant Earth"><span class="partner__scale">Jewelry</span></div>
-        <div class="partner"><img src="logos/lulu-and-georgia.svg" alt="Lulu and Georgia"><span class="partner__scale">Home</span></div>
-        <div class="partner partner--blend"><img src="logos/felix-gray.png" alt="Felix Gray"><span class="partner__scale">Eyewear</span></div>
-        <div class="partner partner--blend"><img src="logos/monster.png" alt="Monster Tree Service"><span class="partner__scale">Services</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/michaels.svg" alt="Michaels"><span class="partner__scale">1,300 locations</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/advance-auto-parts.svg" alt="Advance Auto Parts"><span class="partner__scale">F500 retail</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/mattress-firm.svg" alt="Mattress Firm"><span class="partner__scale">2,500 stores</span></div>
+        <div class="partner partner--blend"><img loading="lazy" decoding="async" src="logos/casper.png" alt="Casper"><span class="partner__scale">DTC</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/sonos.svg" alt="Sonos"><span class="partner__scale">Consumer tech</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/irobot.svg" alt="iRobot"><span class="partner__scale">Robotics</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/peloton.svg" alt="Peloton"><span class="partner__scale">Connected fitness</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/brilliant-earth.svg" alt="Brilliant Earth"><span class="partner__scale">Jewelry</span></div>
+        <div class="partner"><img loading="lazy" decoding="async" src="logos/lulu-and-georgia.svg" alt="Lulu and Georgia"><span class="partner__scale">Home</span></div>
+        <div class="partner partner--blend"><img loading="lazy" decoding="async" src="logos/felix-gray.png" alt="Felix Gray"><span class="partner__scale">Eyewear</span></div>
+        <div class="partner partner--blend"><img loading="lazy" decoding="async" src="logos/monster.png" alt="Monster Tree Service"><span class="partner__scale">Services</span></div>
         <div class="partner partner--more">+ unlisted</div>
       </div>
       <div class="partners__foot">Integrations, pipelines &amp; AI applications shipped across these teams.</div>
@@ -320,11 +330,12 @@
         <h2>The gap is usually one conversation.</h2>
         <p>Tell us where AI fits in your business and we'll tell you honestly if and how we can help. No pressure, no pitch deck.</p>
       </div>
-      <form class="contact__form" id="contactForm" onsubmit="handleSubmit(event)">
+      <form class="contact__form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required aria-required="true" aria-describedby="nameError" />
+            <p class="form__error" id="nameError">Please enter your name.</p>
           </div>
           <div class="form-group">
             <label for="company">Company</label>
@@ -333,11 +344,13 @@
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="jane@acme.com" required />
+          <input type="email" id="email" name="email" placeholder="jane@acme.com" required aria-required="true" aria-describedby="emailError" />
+          <p class="form__error" id="emailError">Please enter a valid email address.</p>
         </div>
         <div class="form-group">
           <label for="message">What are you working on?</label>
-          <textarea id="message" name="message" rows="4" placeholder="Briefly describe the workflow or challenge you're looking to solve..." required></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Briefly describe the workflow or challenge you're looking to solve..." required aria-required="true" aria-describedby="messageError"></textarea>
+          <p class="form__error" id="messageError">Please tell us a bit about what you're working on.</p>
         </div>
         <!-- Honeypot — invisible to humans, bots fill it and get silently rejected -->
         <div style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
@@ -347,8 +360,11 @@
 
         <button type="submit" class="btn btn--primary btn--full">Send Message</button>
         <p class="form__note">We respond within 1 business day.</p>
-        <div id="formSuccess" class="form__success" style="display:none;">
+        <div id="formSuccess" class="form__success" role="status" aria-live="polite" style="display:none;">
           Message sent — we'll be in touch soon.
+        </div>
+        <div id="formFail" class="form__fail" role="alert">
+          Something went wrong sending your message. Please email <a href="mailto:info@iguanai.us">info@iguanai.us</a> directly.
         </div>
       </form>
     </div>
@@ -373,7 +389,9 @@
           <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#partners">Partners</a>
+          <a href="/case-studies/">Case Studies</a>
           <a href="/blog/">Blog</a>
+          <a href="/faq/">FAQ</a>
         </div>
         <div class="footer__col">
           <h4>Connect</h4>

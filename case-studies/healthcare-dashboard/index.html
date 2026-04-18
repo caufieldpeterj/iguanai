@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One dashboard for a healthcare services CEO — IguanAI Case Study</title>
+  <meta name="description" content="A healthcare services company replaced four spreadsheets and a Monday-morning data scramble with one CEO dashboard." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="IguanAI Team" />
+  <link rel="canonical" href="https://iguanai.us/case-studies/healthcare-dashboard/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="IguanAI" />
+  <meta property="og:title" content="One dashboard for a healthcare services CEO" />
+  <meta property="og:description" content="A healthcare services company replaced four spreadsheets and a Monday-morning data scramble with one CEO dashboard." />
+  <meta property="og:url" content="https://iguanai.us/case-studies/healthcare-dashboard/" />
+  <meta property="og:image" content="https://iguanai.us/og-image.png" />
+  <meta property="article:published_time" content="2026-04-17" />
+  <meta property="article:author" content="IguanAI Team" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="One dashboard for a healthcare services CEO" />
+  <meta name="twitter:description" content="A healthcare services company replaced four spreadsheets and a Monday-morning data scramble with one CEO dashboard." />
+  <meta name="twitter:image" content="https://iguanai.us/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "One dashboard for a healthcare services CEO",
+    "description": "A healthcare services company replaced four spreadsheets and a Monday-morning data scramble with one CEO dashboard.",
+    "url": "https://iguanai.us/case-studies/healthcare-dashboard/",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-17",
+    "image": "https://iguanai.us/og-image.png",
+    "author": { "@type": "Organization", "name": "IguanAI" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IguanAI",
+      "logo": { "@type": "ImageObject", "url": "https://iguanai.us/og-image.png" }
+    },
+    "about": { "@type": "Thing", "name": "Healthcare operations dashboard" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://iguanai.us/case-studies/healthcare-dashboard/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img" alt="IguanAI"></a>
+      <nav class="nav__links">
+        <a href="/#services">Services</a>
+        <a href="/#about">About</a>
+        <a href="/#partners">Partners</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact" class="btn btn--nav">Get in Touch</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="/#services" onclick="toggleMenu()">Services</a>
+      <a href="/#about" onclick="toggleMenu()">About</a>
+      <a href="/#partners" onclick="toggleMenu()">Partners</a>
+      <a href="/case-studies/" onclick="toggleMenu()">Case Studies</a>
+      <a href="/blog/" onclick="toggleMenu()">Blog</a>
+      <a href="/#contact" onclick="toggleMenu()">Get in Touch</a>
+    </div>
+  </header>
+
+  <main class="post">
+    <div class="container post__inner">
+      <p class="post__back"><a href="/case-studies/">&larr; All case studies</a></p>
+      <span class="section-tag">Case Study · Healthcare</span>
+      <h1>One dashboard for a healthcare services CEO</h1>
+      <p class="post__meta">Industry: Healthcare services · Engagement: [PLACEHOLDER: Q4 2025]</p>
+
+<blockquote>"The dashboard IguanAI built replaced four separate spreadsheets. I check one screen in the morning and I know exactly where the business stands."<br/><em>— CEO, Healthcare Services Company</em></blockquote>
+
+<h2>The challenge</h2>
+<p>A [PLACEHOLDER: multi-site] healthcare services company was running its weekly executive review on four spreadsheets — patient volume, staffing utilization, payer-mix, and cash collections — each maintained by a different person. By the time the CEO sat down on Monday, the numbers were already two days old, the definitions did not always match, and a third of the meeting was spent reconciling the spreadsheets against each other instead of making decisions.</p>
+<p>The asks were simple but had been deferred for two years: <em>one</em> view of the business, refreshed automatically, with the same definitions used everywhere.</p>
+
+<h2>Our approach</h2>
+<p>We started by interviewing the four spreadsheet owners separately and asking the same question: "What does this number mean, and where does it come from?" The answers diverged in small but consequential ways — different inclusion rules for no-shows, different cutoffs for the reporting week, different handling of inter-site transfers. Before any code, we wrote a one-page definitions document and got the CEO to sign off on it.</p>
+<p>From there, we wired the source systems — EHR exports, the staffing tool, and the practice management system — into a single warehouse, applied the agreed-on definitions in a transformation layer, and built a dashboard the CEO could actually read at a glance.</p>
+
+<h2>What we built</h2>
+<ul>
+  <li>An automated nightly pipeline that pulls from the EHR, staffing system, and practice management software — replacing four manual spreadsheet refreshes.</li>
+  <li>A canonical metrics layer with documented definitions, so every number on the dashboard ties back to a written rule.</li>
+  <li>A single executive dashboard with [PLACEHOLDER: ~12] tiles covering volume, utilization, payer mix, and collections, plus a leaderboard view by site.</li>
+  <li>An exception alert that flags any metric outside its expected range before the Monday meeting, so the CEO walks in already knowing what to ask.</li>
+  <li>A printable Friday PDF that goes to the board.</li>
+</ul>
+
+<h2>Results</h2>
+<ul>
+  <li><strong>4 reports consolidated into 1</strong> — eliminated four separate weekly spreadsheet refreshes.</li>
+  <li><strong>[PLACEHOLDER: ~6 hours/week]</strong> recovered across the operations team that previously maintained the spreadsheets.</li>
+  <li>Monday executive review shortened from [PLACEHOLDER: ~90 minutes to ~40], with discussion focused on decisions instead of reconciliation.</li>
+  <li>Reporting lag reduced from [PLACEHOLDER: 2 days to overnight].</li>
+</ul>
+
+<h2>Timeline</h2>
+<ul>
+  <li><strong>Week 1:</strong> Interviews with each spreadsheet owner, source system audit, and signed-off definitions document.</li>
+  <li><strong>Weeks 2–3:</strong> Pipeline build from EHR, staffing, and PM systems into the warehouse; metrics layer in place.</li>
+  <li><strong>Week 4:</strong> Dashboard build, side-by-side comparison against the legacy spreadsheets for one full reporting cycle.</li>
+  <li><strong>Week 5:</strong> Cutover, retirement of the legacy spreadsheets, and handoff documentation for the operations team.</li>
+</ul>
+<p>Total elapsed time from kickoff to retired spreadsheets: <strong>[PLACEHOLDER: about five weeks]</strong>.</p>
+
+<p class="post__sign">— The IguanAI Team</p>
+
+      <div class="post__cta">
+        <p>If your weekly review starts with reconciling spreadsheets instead of making decisions, that's the kind of problem we're built for.</p>
+        <a href="/#contact" class="btn btn--primary">Book a Free Call</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img logo-img--footer" alt="IguanAI"></a>
+        <p>High touch. Outcome obsessed.</p>
+        <p class="footer__location">Delray Beach, FL</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="/#services">Services</a>
+          <a href="/#about">About</a>
+          <a href="/#partners">Partners</a>
+          <a href="/case-studies/">Case Studies</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="/#contact">Contact Us</a>
+          <a href="mailto:info@iguanai.us">info@iguanai.us</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 IguanAI LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

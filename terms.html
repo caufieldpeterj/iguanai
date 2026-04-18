@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <header class="nav">
     <div class="container nav__inner">
@@ -20,9 +21,10 @@
         <a href="/#about">About</a>
         <a href="/#partners">Partners</a>
         <a href="/blog/">Blog</a>
+        <a href="/faq/">FAQ</a>
         <a href="/#contact" class="btn btn--nav">Get in Touch</a>
       </nav>
-      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -31,12 +33,13 @@
       <a href="/#about" onclick="toggleMenu()">About</a>
       <a href="/#partners" onclick="toggleMenu()">Partners</a>
       <a href="/blog/" onclick="toggleMenu()">Blog</a>
+      <a href="/faq/" onclick="toggleMenu()">FAQ</a>
       <a href="/#contact" onclick="toggleMenu()">Contact</a>
       <a href="/#contact" onclick="toggleMenu()">Get in Touch</a>
     </div>
   </header>
 
-  <main class="doc">
+  <main id="main" tabindex="-1" class="doc">
     <div class="container doc__inner">
       <span class="section-tag">Legal</span>
       <h1>Terms of Service</h1>
@@ -104,6 +107,7 @@
           <a href="/#about">About</a>
           <a href="/#partners">Partners</a>
           <a href="/blog/">Blog</a>
+          <a href="/faq/">FAQ</a>
         </div>
         <div class="footer__col">
           <h4>Connect</h4>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboarding automation for an e-commerce brand — IguanAI Case Study</title>
+  <meta name="description" content="A growing e-commerce brand mapped its new-customer onboarding in a single session and shipped an automation a week later." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="IguanAI Team" />
+  <link rel="canonical" href="https://iguanai.us/case-studies/ecommerce-onboarding/" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="IguanAI" />
+  <meta property="og:title" content="Onboarding automation for an e-commerce brand" />
+  <meta property="og:description" content="A growing e-commerce brand mapped its new-customer onboarding in a single session and shipped an automation a week later." />
+  <meta property="og:url" content="https://iguanai.us/case-studies/ecommerce-onboarding/" />
+  <meta property="og:image" content="https://iguanai.us/og-image.png" />
+  <meta property="article:published_time" content="2026-04-17" />
+  <meta property="article:author" content="IguanAI Team" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Onboarding automation for an e-commerce brand" />
+  <meta name="twitter:description" content="A growing e-commerce brand mapped its new-customer onboarding in a single session and shipped an automation a week later." />
+  <meta name="twitter:image" content="https://iguanai.us/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Onboarding automation for an e-commerce brand",
+    "description": "A growing e-commerce brand mapped its new-customer onboarding in a single session and shipped an automation a week later.",
+    "url": "https://iguanai.us/case-studies/ecommerce-onboarding/",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-17",
+    "image": "https://iguanai.us/og-image.png",
+    "author": { "@type": "Organization", "name": "IguanAI" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IguanAI",
+      "logo": { "@type": "ImageObject", "url": "https://iguanai.us/og-image.png" }
+    },
+    "about": { "@type": "Thing", "name": "E-commerce customer onboarding automation" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://iguanai.us/case-studies/ecommerce-onboarding/" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img" alt="IguanAI"></a>
+      <nav class="nav__links">
+        <a href="/#services">Services</a>
+        <a href="/#about">About</a>
+        <a href="/#partners">Partners</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#contact" class="btn btn--nav">Get in Touch</a>
+      </nav>
+      <button class="nav__hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="/#services" onclick="toggleMenu()">Services</a>
+      <a href="/#about" onclick="toggleMenu()">About</a>
+      <a href="/#partners" onclick="toggleMenu()">Partners</a>
+      <a href="/case-studies/" onclick="toggleMenu()">Case Studies</a>
+      <a href="/blog/" onclick="toggleMenu()">Blog</a>
+      <a href="/#contact" onclick="toggleMenu()">Get in Touch</a>
+    </div>
+  </header>
+
+  <main class="post">
+    <div class="container post__inner">
+      <p class="post__back"><a href="/case-studies/">&larr; All case studies</a></p>
+      <span class="section-tag">Case Study · E-commerce</span>
+      <h1>Onboarding automation for an e-commerce brand</h1>
+      <p class="post__meta">Industry: E-commerce / DTC · Engagement: [PLACEHOLDER: Q1 2026]</p>
+
+<blockquote>"They mapped our entire onboarding workflow in a single session and had an automation running within a week. We haven't touched it since."<br/><em>— Director of Operations, E-commerce Brand</em></blockquote>
+
+<h2>The challenge</h2>
+<p>A [PLACEHOLDER: ~$15M revenue] DTC brand had grown faster than its onboarding process. New customers hit a sequence of touchpoints — welcome email, account setup nudge, first-purchase offer, post-purchase confirmation, review request — but every one of those steps lived in a different tool, was triggered by a different person, and broke quietly during sale weekends.</p>
+<p>The Director of Operations needed onboarding to be one workflow, not five, and to keep running on Black Friday weekend without anyone babysitting it.</p>
+
+<h2>Our approach</h2>
+<p>One working session in their office. We took a marker to a whiteboard, walked the existing onboarding step by step, and circled every place where the process depended on a human remembering to do something. There were [PLACEHOLDER: seven] of those.</p>
+<p>From that one session we agreed on the target state — a single orchestrated workflow with a clear owner, every handoff explicit, and the failure modes monitored — and went away to build it.</p>
+
+<h2>What we built</h2>
+<ul>
+  <li>A single onboarding orchestration that triggers off a new order in the e-commerce platform and runs every downstream step from there.</li>
+  <li>Connections into the brand's existing email, SMS, reviews, and helpdesk tools — no platform migration required.</li>
+  <li>Branching logic for first-time vs. returning customers, and for orders that include items requiring extra setup guidance.</li>
+  <li>A monitoring layer that watches for any onboarding step that fails or stalls, and pages the on-call operator before customers notice.</li>
+  <li>A simple weekly report showing onboarding completion rate, drop-off points, and time-from-purchase-to-first-engagement.</li>
+</ul>
+
+<h2>Results</h2>
+<ul>
+  <li><strong>40% reduction in onboarding time</strong> from purchase to fully activated customer.</li>
+  <li><strong>[PLACEHOLDER: ~95%]</strong> of new customers now complete every onboarding step, up from [PLACEHOLDER: ~70%].</li>
+  <li>Onboarding ran through [PLACEHOLDER: Black Friday / Cyber Monday] without manual intervention — handling [PLACEHOLDER: ~3x] normal daily volume.</li>
+  <li>Operations team eliminated a recurring [PLACEHOLDER: ~4 hour/week] manual handoff checklist.</li>
+</ul>
+
+<h2>Timeline</h2>
+<ul>
+  <li><strong>Day 1:</strong> Whiteboard session in their office, end-state agreed, scope locked.</li>
+  <li><strong>Days 2–5:</strong> Build of the orchestration, integrations into the existing tool stack, branching logic for customer types.</li>
+  <li><strong>Day 6:</strong> Side-by-side test against the manual workflow on a sample of real orders.</li>
+  <li><strong>Day 7:</strong> Cutover. Monitoring live. Manual checklist retired.</li>
+</ul>
+<p>Total elapsed time from kickoff to production: <strong>[PLACEHOLDER: one week]</strong>.</p>
+
+<p class="post__sign">— The IguanAI Team</p>
+
+      <div class="post__cta">
+        <p>If your onboarding lives in five tools and breaks on busy weekends, that is exactly the kind of workflow we like to take a whiteboard to.</p>
+        <a href="/#contact" class="btn btn--primary">Book a Free Call</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="nav__logo"><img src="/logo.jpg" class="logo-img logo-img--footer" alt="IguanAI"></a>
+        <p>High touch. Outcome obsessed.</p>
+        <p class="footer__location">Delray Beach, FL</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4>Company</h4>
+          <a href="/#services">Services</a>
+          <a href="/#about">About</a>
+          <a href="/#partners">Partners</a>
+          <a href="/case-studies/">Case Studies</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="/#contact">Contact Us</a>
+          <a href="mailto:info@iguanai.us">info@iguanai.us</a>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; 2026 IguanAI LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
