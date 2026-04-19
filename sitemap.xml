@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://iguanai.us/team/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://iguanai.us/blog/launch/</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
