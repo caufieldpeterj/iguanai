@@ -332,43 +332,70 @@
         <h2>The gap is usually one conversation.</h2>
         <p>Tell us where AI fits in your business and we'll tell you honestly if and how we can help. No pressure, no pitch deck.</p>
       </div>
-      <form class="contact__form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required aria-required="true" aria-describedby="nameError" />
-            <p class="form__error" id="nameError">Please enter your name.</p>
-          </div>
-          <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Acme Corp" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="jane@acme.com" required aria-required="true" aria-describedby="emailError" />
-          <p class="form__error" id="emailError">Please enter a valid email address.</p>
-        </div>
-        <div class="form-group">
-          <label for="message">What are you working on?</label>
-          <textarea id="message" name="message" rows="4" placeholder="Briefly describe the workflow or challenge you're looking to solve..." required aria-required="true" aria-describedby="messageError"></textarea>
-          <p class="form__error" id="messageError">Please tell us a bit about what you're working on.</p>
-        </div>
-        <!-- Honeypot — invisible to humans, bots fill it and get silently rejected -->
-        <div style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
-          <label for="website">Leave this blank</label>
-          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      <div class="contact__panels">
+        <div class="contact__tabs" role="tablist" aria-label="How to reach us">
+          <button type="button" class="contact__tab contact__tab--active" role="tab" id="contact-book-tab" aria-selected="true" aria-controls="contact-book" tabindex="0">Book a call</button>
+          <button type="button" class="contact__tab" role="tab" id="contact-message-tab" aria-selected="false" aria-controls="contact-message" tabindex="-1">Send a message</button>
         </div>
 
-        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-        <p class="form__note">We respond within 1 business day.</p>
-        <div id="formSuccess" class="form__success" role="status" aria-live="polite" style="display:none;">
-          Message sent — we'll be in touch soon.
+        <div class="contact__panel contact__panel--active" role="tabpanel" id="contact-book" aria-labelledby="contact-book-tab">
+          <!-- Cal.com inline embed — peter-iguanai/15min -->
+          <div class="contact__embed" id="cal-inline-embed"></div>
+          <p class="form__note">Free 15-minute discovery call. Pick a slot that works.</p>
         </div>
-        <div id="formFail" class="form__fail" role="alert">
-          Something went wrong sending your message. Please email <a href="mailto:info@iguanai.us">info@iguanai.us</a> directly.
+
+        <div class="contact__panel" role="tabpanel" id="contact-message" aria-labelledby="contact-message-tab" hidden>
+          <form class="contact__form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required aria-required="true" aria-describedby="nameError" />
+                <p class="form__error" id="nameError">Please enter your name.</p>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Acme Corp" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@acme.com" required aria-required="true" aria-describedby="emailError" />
+              <p class="form__error" id="emailError">Please enter a valid email address.</p>
+            </div>
+            <div class="form-group">
+              <label for="message">What are you working on?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Briefly describe the workflow or challenge you're looking to solve..." required aria-required="true" aria-describedby="messageError"></textarea>
+              <p class="form__error" id="messageError">Please tell us a bit about what you're working on.</p>
+            </div>
+            <!-- Honeypot — invisible to humans, bots fill it and get silently rejected -->
+            <div style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
+              <label for="website">Leave this blank</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <p class="form__note">We respond within 1 business day.</p>
+            <div id="formSuccess" class="form__success" role="status" aria-live="polite" style="display:none;">
+              Message sent — we'll be in touch soon.
+            </div>
+            <div id="formFail" class="form__fail" role="alert">
+              Something went wrong sending your message. Please email <a href="mailto:info@iguanai.us">info@iguanai.us</a> directly.
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
+
+      <!-- Cal.com embed loader — official snippet, see cal.com/docs/core-features/embed -->
+      <script>
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "discovery", {origin: "https://app.cal.com"});
+        Cal.ns.discovery("inline", {
+          elementOrId: "cal-inline-embed",
+          config: { layout: "month_view", theme: "light" },
+          calLink: "peter-iguanai/15min"
+        });
+        Cal.ns.discovery("ui", { hideEventTypeDetails: false, layout: "month_view" });
+      </script>
     </div>
   </section>
 
