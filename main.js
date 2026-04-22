@@ -96,6 +96,40 @@ async function handleSubmit(e) {
   }
 }
 
+// Contact section tabs — Book a call / Send a message
+(function () {
+  const tablist = document.querySelector('.contact__tabs');
+  if (!tablist) return;
+  const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+
+  function activate(tab, setFocus) {
+    tabs.forEach(t => {
+      const active = t === tab;
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+      t.setAttribute('tabindex', active ? '0' : '-1');
+      t.classList.toggle('contact__tab--active', active);
+      const panel = document.getElementById(t.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !active;
+    });
+    if (setFocus) tab.focus();
+  }
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => activate(tab, false));
+    tab.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        activate(tabs[(i + dir + tabs.length) % tabs.length], true);
+      } else if (e.key === 'Home') {
+        e.preventDefault(); activate(tabs[0], true);
+      } else if (e.key === 'End') {
+        e.preventDefault(); activate(tabs[tabs.length - 1], true);
+      }
+    });
+  });
+})();
+
 // Testimonial carousel
 (function () {
   const carousel = document.getElementById('testimonialCarousel');
