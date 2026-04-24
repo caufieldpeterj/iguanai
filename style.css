@@ -763,8 +763,9 @@ em { font-style: italic; color: var(--teal); }
   border-radius: 3px;
   box-shadow: var(--shadow);
   min-height: 640px;
+  max-height: 720px;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 .contact__embed iframe { border-radius: 3px; }
 .contact__panel .form__note { margin-top: 12px; }
