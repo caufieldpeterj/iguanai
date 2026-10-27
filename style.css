@@ -483,6 +483,16 @@ em { font-style: italic; color: var(--teal); }
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.testimonial-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0;
+}
+.testimonial-slide .testimonial-outcome,
 .testimonial-slide blockquote {
   font-family: var(--font-display);
   font-style: italic;
@@ -525,6 +535,38 @@ em { font-style: italic; color: var(--teal); }
 .testimonial-link:hover {
   color: var(--ink);
   border-bottom-color: var(--teal);
+}
+
+.example-flag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin: 0 0 14px;
+}
+.example-outcome {
+  border-left: 2px solid var(--teal);
+  padding: 4px 0 4px 24px;
+  margin: 28px 0 36px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--ink);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.example-outcome strong {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
 }
 
 /* ============================================
@@ -1214,6 +1256,7 @@ input:focus, textarea:focus {
   .footer__inner { flex-direction: column; }
   .footer__cols { flex-wrap: wrap; gap: 32px; }
   .testimonial-carousel { padding: 28px 24px 24px; margin-top: 56px; }
+  .example-outcome { font-size: 1.2rem; padding-left: 16px; margin: 24px 0 28px; }
   .blog-index { padding: 64px 0 80px; }
   .post { padding: 56px 0 80px; }
   .post__inner > p { font-size: 1rem; }
